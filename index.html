@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/kw.png" type="image/gif" sizes="30x30">
+        <title>AngularJS Menu Transition</title>
+        <script src="js/modernizr.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/normalize.min.css">     <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body ng-app="Transition">
+        <div ng-controller="TransitionController">
+            <h1>AngularJS Menu Transition</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" title="top" class="active" ng-class="{'active':transition=='slide-top'}" ng-click="top()">TOP</a></li>
+                    <li><a href="#" title="left" ng-class="{'active':transition=='slide-left'}" ng-click="left()">LEFT</a></li>
+                    <li><a href="#" title="bottom" ng-class="{'active':transition=='slide-bottom'}" ng-click="bottom()">BOTTOM</a></li>
+                    <li><a href="#" title="right" ng-class="{'active':transition=='slide-right'}" ng-click="right()">RIGHT</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div ui-view ng-class="transition">
+                    content here
+                </div> 
+            </div>
+        </div>
+
+        <footer>Kanan Ahalpara Copyright ©</footer>
+
+        <script data-require="angular.js@1.2.10" data-semver="1.2.10" src="https://code.angularjs.org/1.2.10/angular.min.js"></script>
+        <script data-require="angular-animate@1.2.11" data-semver="1.2.11" src="https://code.angularjs.org/1.2.11/angular-animate.min.js"></script>
+        <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js'></script>
+        <script  src="js/index.js"></script>
+    </body>
+
+</html>
